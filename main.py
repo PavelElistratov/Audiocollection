@@ -14,7 +14,7 @@ class Album:
         self.tracks = [] # Пустой список треков при создании объекта
 
     def add_track(self, track):  # добавление нового трека в список треков
-        self.tracks.append(track) # добавление (стандартный метод .append) объекта в список
+        self.tracks.append(track) # добавление (стандартный метод .append) объекта track в список self.tracks
 
     def get_tracks(self):   # выводит информацию по всем трекам (используется метод show)
         for track in self.tracks:
