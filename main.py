@@ -3,7 +3,7 @@ class Track:
         self.name = name
         self.time = int(time)
 
-    def show(self): # метод, выводящий информацию по треку в виде <Название-Длительность>
+    def show(self):  # метод, выводящий информацию по треку в виде <Название-Длительность>
         print(f'{self.name}-{self.time}')
 
 
@@ -11,19 +11,19 @@ class Album:
     def __init__(self, album_name='Unnamed album', band='No band'):
         self.album_name = album_name
         self.band = band
-        self.tracks = [] # Пустой список треков при создании объекта
+        self.tracks = []           # Пустой список треков при создании объекта
 
-    def add_track(self, track):  # добавление нового трека в список треков
-        self.tracks.append(track) # добавление (стандартный метод .append) объекта track в список self.tracks
+    def add_track(self, track):    # добавление нового трека в список треков
+        self.tracks.append(track)  # добавление (стандартный метод .append) объекта track в список self.tracks
 
     def get_tracks(self):   # выводит информацию по всем трекам (используется метод show)
-        for track in self.tracks:
-            track.show()
+        for track in self.tracks:  # цикл по элементам списка треков
+            track.show()           # метод .show к каждому объекту
 
     def get_duration(self):  # выводит длительность всего альбома
         total = 0
-        for track in self.tracks:
-            total += track.time
+        for track in self.tracks:  # цикл по элементам списка треков
+            total += track.time    # суммирование времени
         print(f'Общая длительность альбома {self.album_name} {total} мин')
 
 
